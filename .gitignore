@@ -1,0 +1,40 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/dist
+/dll
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+/src/pages/*
+/src/routes.jsx
+!/src/pages/index
+!/src/pages/forbidden
+!/src/pages/users
+!/src/pages/welcome
+!/src/pages/profile
+
+.services.js
+.routes.jsx
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+.api.js
+yarn.lock
+package-lock.json
+.idea
+.vscode
