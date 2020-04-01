@@ -7,6 +7,7 @@ import { getStore } from "./store/index";
 import React from "react";
 
 export const store = getStore();
+let context = { css: [] }
 
 export const render = req => {
   const matchedRoutes = matchRoutes(routes, req.path);
@@ -19,7 +20,7 @@ export const render = req => {
   Promise.all(promises).then(() => {
     const content = renderToString(
       <Provider store={store}>
-        <StaticRouter location={req.path}>
+        <StaticRouter location={req.path} context={context}>
           {routes.map(route => (
             <Route key={route.key} {...route} />
           ))}

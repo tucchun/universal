@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+import { hydrate } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 // import { Route } from "react-router-dom";
@@ -22,4 +22,4 @@ const App = () => (
 // const str = renderToString(<App name="tucchun" />)
 // console.log('str', str)
 
-render(<App />, window.document.getElementById("root"));
+hydrate(<App />, window.document.getElementById("root"));
